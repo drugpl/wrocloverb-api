@@ -58,5 +58,12 @@ module WrocLove
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Remove clutter
+    config.generators do |generate|
+      generate.helper false
+      generate.assets false
+      generate.view_specs false
+    end
   end
 end
