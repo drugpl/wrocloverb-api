@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'sqlite3'
 gem 'rails-api'
 gem 'roar-rails'
+gem 'schema_plus'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
