@@ -16,3 +16,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test do
+  gem 'turn'
+  gem 'minitest'
+end
