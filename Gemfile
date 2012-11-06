@@ -21,4 +21,5 @@ gem 'jquery-rails'
 group :test do
   gem 'turn'
   gem 'minitest'
+  gem 'debugger'
 end
