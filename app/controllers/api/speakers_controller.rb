@@ -14,9 +14,9 @@ class Api::SpeakersController < ApiController
     consume!(speaker)
 
     if speaker.save
-      respond_with speaker, status: :created, location: api_speaker_url(@speaker)
+      respond_with speaker, status: :created, location: api_speaker_url(speaker)
     else
-      respond_with speaker.errors, status: :unprocessable_entity
+      respond_with speaker, status: :unprocessable_entity
     end
   end
 
@@ -24,10 +24,10 @@ class Api::SpeakersController < ApiController
     speaker = Speaker.find(params[:id])
     consume!(speaker)
 
-    if speaker.save # update_attributes(params[:speaker])
+    if speaker.save
       head :no_content
     else
-      respond_with speaker.errors, status: :unprocessable_entity
+      respond_with speaker, status: :unprocessable_entity
     end
   end
 
