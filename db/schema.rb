@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105221950) do
+ActiveRecord::Schema.define(:version => 20121108002655) do
+
+  create_table "api_tokens", :force => true do |t|
+    t.string   "token",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "speakers", :force => true do |t|
     t.string   "name",        :null => false

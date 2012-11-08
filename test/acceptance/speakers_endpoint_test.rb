@@ -5,6 +5,7 @@ class SpeakersEndpointTest < Bbq::TestCase
   MEDIA_TYPE = 'application/json'
 
   setup do
+    @api_token = api_tokens(:one)
     @apotonick = speakers(:apotonick)
     @client = TestClient.new(
       headers: {
@@ -16,6 +17,14 @@ class SpeakersEndpointTest < Bbq::TestCase
 
   def valid_speaker_data
     { name: 'Michal Lomnicki', bio: 'The Polish Guy.', website_url: 'mlomnicki.com' }.stringify_keys
+  end
+
+  def authentication_header
+    { 'Authorization' => encode_token(@api_token.token) }
+  end
+
+  def encode_token(token)
+    ActionController::HttpAuthentication::Basic.encode_credentials(token, nil)
   end
 
   test "should list speakers" do
@@ -30,7 +39,7 @@ class SpeakersEndpointTest < Bbq::TestCase
   end
 
   test "should create speaker given valid params" do
-    response = @client.post '/api/speakers', valid_speaker_data.to_json
+    response = @client.post '/api/speakers', valid_speaker_data.to_json, authentication_header
     assert_equal 201, response.status
     assert_match %r[/api/speakers/\d], response.headers['Location']
 
@@ -40,9 +49,14 @@ class SpeakersEndpointTest < Bbq::TestCase
     assert_equal valid_speaker_data['website_url'], speaker['website_url']
   end
 
+  test "should require api key to create" do
+    response = @client.post '/api/speakers/', valid_speaker_data.to_json
+    assert_equal 401, response.status
+  end
+
   test "should not create speaker given invalid params" do
     invalid_speaker_data = valid_speaker_data.except('name')
-    response = @client.post '/api/speakers', invalid_speaker_data.to_json
+    response = @client.post '/api/speakers', invalid_speaker_data.to_json, authentication_header
     assert_equal 422, response.status
 
     errors = response.body
@@ -69,7 +83,7 @@ class SpeakersEndpointTest < Bbq::TestCase
   end
 
   test "should update speaker given valid params" do
-    response = @client.put "/api/speakers/#{@apotonick.id}", {name: 'Apotonick'}.to_json
+    response = @client.put "/api/speakers/#{@apotonick.id}", {name: 'Apotonick'}.to_json, authentication_header
     assert_equal 204, response.status
 
     assert_empty response.body
@@ -77,10 +91,15 @@ class SpeakersEndpointTest < Bbq::TestCase
     assert_equal 'Apotonick', response.body['name']
   end
 
+  test "should require api key to update" do
+    response = @client.put "/api/speakers/#{@apotonick.id}", {name: 'Apotonick'}.to_json
+    assert_equal 401, response.status
+  end
+
   test "should update speaker with PATCH when available in Rails" do
     begin
       id = @apotonick.id
-      response = @client.patch "/api/speakers/#{id}", {name: 'Apotonick'}.to_json
+      response = @client.patch "/api/speakers/#{id}", {name: 'Apotonick'}.to_json, authentication_header
       assert_equal 204, response.status
 
       assert_empty response.body
@@ -91,7 +110,7 @@ class SpeakersEndpointTest < Bbq::TestCase
   end
 
   test "should not update speaker given invalid data" do
-    response = @client.put "/api/speakers/#{@apotonick.id}", {name: nil}.to_json
+    response = @client.put "/api/speakers/#{@apotonick.id}", {name: nil}.to_json, authentication_header
     assert_equal 422, response.status
 
     errors = response.body
@@ -99,8 +118,13 @@ class SpeakersEndpointTest < Bbq::TestCase
     assert errors['errors']['name']
   end
 
-  test "should destroy speaker" do
+  test "should require api key to destroy" do
     response = @client.delete "/api/speakers/#{@apotonick.id}"
+    assert_equal 401, response.status
+  end
+
+  test "should destroy speaker" do
+    response = @client.delete "/api/speakers/#{@apotonick.id}", nil, authentication_header
     assert_equal 204, response.status
     assert_empty response.body
 

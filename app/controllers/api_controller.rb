@@ -1,6 +1,7 @@
 class ApiController < ActionController::API
   include ActionController::MimeResponds
   include Roar::Rails::ControllerAdditions
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
 
   respond_to :json
 

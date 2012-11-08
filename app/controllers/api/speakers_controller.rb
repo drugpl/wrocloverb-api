@@ -1,4 +1,6 @@
 class Api::SpeakersController < ApiController
+  before_filter :require_token, except: [:index, :show]
+
   def index
     speakers = Speaker.all
     respond_with speakers
@@ -35,5 +37,11 @@ class Api::SpeakersController < ApiController
     speaker = Speaker.find(params[:id])
     speaker.destroy
     head :no_content
+  end
+
+  protected
+
+  def require_token
+    authenticate_or_request_with_http_basic { |token, password| ApiToken.find_by_token(token) }
   end
 end
