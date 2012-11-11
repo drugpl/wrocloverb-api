@@ -8,4 +8,10 @@ class ApiController < ActionController::API
   rescue_from 'ActiveRecord::RecordNotFound' do |exception|
     render json: {message: 'Not found'}, status: 404
   end
+
+  protected
+
+  def require_token
+    authenticate_or_request_with_http_basic { |token, password| ApiToken.find_by_token(token) }
+  end    
 end

@@ -38,10 +38,4 @@ class Api::SupportersController < ApiController
     supporter.destroy
     head :no_content
   end
-
-  protected
-
-  def require_token
-    authenticate_or_request_with_http_basic { |token, password| ApiToken.find_by_token(token) }
-  end    
 end
