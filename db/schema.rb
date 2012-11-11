@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108002655) do
+ActiveRecord::Schema.define(:version => 20121111163659) do
 
   create_table "api_tokens", :force => true do |t|
     t.string   "token",      :null => false
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(:version => 20121108002655) do
   create_table "speakers", :force => true do |t|
     t.string   "name",        :null => false
     t.text     "bio",         :null => false
+    t.string   "website_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "supporters", :force => true do |t|
+    t.string   "name",        :null => false
+    t.string   "logo_url"
     t.string   "website_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

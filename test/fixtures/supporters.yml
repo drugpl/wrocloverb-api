@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+engineyard:
+  name: Engine Yard
+  logo_url: http://engineyard.com/logo.png
+  website_url: http://engineyard.com/
