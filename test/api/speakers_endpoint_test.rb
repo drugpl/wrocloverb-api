@@ -1,9 +1,7 @@
 require 'test_helper'
 require 'active_support/core_ext/hash/except'
 
-class SpeakersEndpointTest < Bbq::TestCase
-  MEDIA_TYPE = 'application/json'
-
+class SpeakersEndpointTest < ApiTestCase
   setup do
     @api_token = api_tokens(:one)
     @apotonick = speakers(:apotonick)
@@ -17,14 +15,6 @@ class SpeakersEndpointTest < Bbq::TestCase
 
   def valid_speaker_data
     { name: 'Michal Lomnicki', bio: 'The Polish Guy.', website_url: 'mlomnicki.com' }.stringify_keys
-  end
-
-  def authentication_header
-    { 'Authorization' => encode_token(@api_token.token) }
-  end
-
-  def encode_token(token)
-    ActionController::HttpAuthentication::Basic.encode_credentials(token, nil)
   end
 
   test "should list speakers" do

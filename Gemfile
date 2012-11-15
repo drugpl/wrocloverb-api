@@ -5,7 +5,6 @@ gem 'sqlite3'
 gem 'rails-api'
 gem 'roar-rails'
 gem 'schema_plus'
-gem 'bbq', git: 'git://github.com/drugpl/bbq.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -23,4 +22,5 @@ group :test do
   gem 'turn'
   gem 'minitest'
   gem 'debugger'
+  gem 'bbq', git: 'git://github.com/drugpl/bbq.git'
 end

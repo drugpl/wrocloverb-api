@@ -1,9 +1,7 @@
 require 'test_helper'
 require 'active_support/core_ext/hash/except'
 
-class SupportersEndpointTest < Bbq::TestCase
-  MEDIA_TYPE = 'application/json'
-
+class SupportersEndpointTest < ApiTestCase
   setup do
     @api_token = api_tokens(:one)
     @supporters = supporters(:engineyard)
@@ -17,14 +15,6 @@ class SupportersEndpointTest < Bbq::TestCase
 
   def valid_supporter_data
     { name: 'Arkency', website_url: 'http://arkency.com/', logo_url: 'http://arkency.com/logo.jpg' }.stringify_keys
-  end
-
-  def authentication_header
-    { 'Authorization' => encode_token(@api_token.token) }
-  end
-
-  def encode_token(token)
-    ActionController::HttpAuthentication::Basic.encode_credentials(token, nil)
   end
 
   test "should list supporters" do
