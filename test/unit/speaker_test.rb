@@ -1,11 +1,15 @@
 require 'test_helper'
 
 class SpeakerTest < ActiveSupport::TestCase
-  def setup
-    @speaker = speakers(:apotonick)
+  setup do
+    @speaker = Speaker.new
+    @speaker.name = "Nick Sutterer"
+    @speaker.bio  = "Serial drinker"
+    @speaker.website_url = "http://nicksda.apotomo.de"
+    @speaker.slots << Slot.new
   end
 
-  test "should have valid fixture" do
+  test "should have valid setup" do
     assert @speaker.valid?
   end
 
@@ -27,7 +31,11 @@ class SpeakerTest < ActiveSupport::TestCase
     refute @speaker.valid?
   end
 
-  test "should have website_url" do
+  test "should have website url" do
     assert @speaker.website_url
+  end
+
+  test "should have slots assigned" do
+    assert_kind_of Slot, @speaker.slots.first
   end
 end

@@ -1,11 +1,14 @@
 require 'test_helper'
 
 class SupporterTest < ActiveSupport::TestCase
-  def setup
-    @supporter = supporters(:engineyard)
+  setup do
+    @supporter = Supporter.new
+    @supporter.name = "Engine Yard"
+    @supporter.logo_url = "http://engineyard.com/images/logo.png"
+    @supporter.website_url = "http://engineyard.com"
   end
 
-  test "should have valid fixture" do
+  test "should have valid setup" do
     assert @supporter.valid?
   end
 
@@ -16,5 +19,13 @@ class SupporterTest < ActiveSupport::TestCase
   test "should validate name" do
     @supporter.name = nil
     refute @supporter.valid?
+  end
+
+  test "should have logo url" do
+    assert @supporter.logo_url
+  end
+
+  test "should have website url" do
+    assert @supporter.website_url
   end
 end
