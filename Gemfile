@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'rails-api'
 gem 'roar-rails'
 gem 'schema_plus'
+gem 'psych'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
