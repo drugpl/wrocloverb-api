@@ -22,6 +22,5 @@ gem 'jquery-rails'
 group :test do
   gem 'turn'
   gem 'minitest'
-  gem 'debugger'
   gem 'bbq', git: 'git://github.com/drugpl/bbq.git'
 end
