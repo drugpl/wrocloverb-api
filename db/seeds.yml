@@ -1,26 +1,163 @@
 ---
+- :address: "ul. Kościuszki 34"
+  :latitude: 51.111899
+  :longtitude: 17.063925
+  :name: Pub Jaskinia
+  :slots:
+    - :name: Coworking & Hackathon for early-comers
+      :starting_at: 02.03.2012 10:00
+      :ending_at: 03.03.2012 18:00  
+    - :name: Before party 
+      :starting_at: 02.03.2012 20:00
+      :ending_at: 03.03.2012 05:00
+
+- :address: "ul. Plac Grunwaldzki 23"
+  :latitude: 51.111899
+  :longtitude: 17.063925
+  :name: Cynamon Bar
+  :slots:
+    - :name: Main party
+      :starting_at: 03.03.2012 19:30
+      :ending_at: 04.03.2012 05:00
+
+- :address: "ul. Rynek 24"
+  :latitude: 51.110133
+  :longtitude: 17.032877
+  :name: "Bierhalle"
+  :slots:
+    - :name: Drinkup
+      :starting_at: 04.03.2012 19:30
+      :ending_at: 05.03.2012 05:00
+
 - :address: "ul. Joliot-Curie 15"
-  :latitude: 80.00
-  :longtitude: 30.00
+  :latitude: 51.111067
+  :longtitude: 17.053667
   :name: "Instytut Informatyki Uniwersytetu Wroclawskiego"
   :slots:
     - :name: "Opening talk"
-      :starting_at: 10:00
-      :ending_at: 10:15
+      :starting_at: 03.03.2012 10:00
+      :ending_at: 03.03.2012 10:15
       :speakers:
         - :name: "DRUG"
           :bio: "bio"
+    - :name: Open space
+      :starting_at: 03.03.2012 10:00
+      :ending_at: 03.03.2012 19:00          
     - :name: "It's All About Respect!"
-      :starting_at: 10:30
-      :ending_at: 11:15
+      :starting_at: 03.03.2012 10:30
+      :ending_at: 03.03.2012 11:15
       :speakers:
-        - :name: "Nick Sutterer"
-          :bio: "drinker"
-    - :name: "Rails: past, present and the future"
-      :starting_at: 11:30
-      :ending_at: 12:00
+        - :name: Nick Sutterer
+          :bio: drinker
+    - :name: 'Rails: past present and the future'
+      :starting_at: 03.03.2012 11:30
+      :ending_at: 03.03.2012 12:00
       :speakers:
-        - :name: "Piotr Sarnacki"
-          :bio: "bio"
+        - :name: Piotr Sarnacki
+          :bio: bio
+    - :name: Decoupling Persistence (Like There’s Some Tomorrow)
+      :starting_at: 03.03.2012 12:15
+      :ending_at: 03.03.2012 12:45
+      :speakers:
+        - :name: Piotr Szotkowski
+          :bio: bio
+    - :name: lunch break
+      :starting_at: 03.03.2012 12:45
+      :ending_at: 03.03.2012 14:10
+    - :name: JRuby vs. Rubinius - fight
+      :starting_at: 03.03.2012 14:15
+      :ending_at: 03.03.2012 15:00
+      :speakers:
+        - :name: Tim Lossen
+          :bio: bio         
+        - :name: Dirkjan Bussink
+          :bio: bio   
+    - :name: Fear of adding processes
+      :starting_at: 03.03.2012 15:15
+      :ending_at: 03.03.2012 15:45
+      :speakers:
+        - :name: Florian Gilcher
+          :bio: bio   
+    - :name: User perspective testing, using Ruby
+      :starting_at: 03.03.2012 16:00
+      :ending_at: 03.03.2012 16:30
+      :speakers:
+        - :name: Michał Czyż
+          :bio: bio   
+    - :name: DataMapper 2
+      :starting_at: 03.03.2012 16:45
+      :ending_at: 03.03.2012 17:15
+      :speakers:
+        - :name: Piotr Solnica
+          :bio: bio               
+    - :name: It's Business Time
+      :starting_at: 03.03.2012 17:30
+      :ending_at: 03.03.2012 18:00
+      :speakers:
+        - :name: Jim Gay
+          :bio: bio
+    - :name: Lightning talks
+      :starting_at: 03.03.2012 18:15
+      :ending_at: 03.03.2012 19:30
 
-
+    - :name: Open space
+      :starting_at: 03.03.2012 10:00
+      :ending_at: 03.03.2012 19:00 
+    - :name: Programming workout
+      :starting_at: 04.03.2012 10:00
+      :ending_at: 04.03.2012 10:30
+      :speakers:
+        - :name: Michał Taszycki
+          :bio: bio
+    - :name: Testing Fishbowl
+      :starting_at: 04.03.2012 10:45
+      :ending_at: 04.03.2012 11:15
+    - :name: Designing Hypermedia APIs
+      :starting_at: 04.03.2012 11:30
+      :ending_at: 04.03.2012 12:00
+      :speakers:
+        - :name: Steve Klabnik 
+          :bio: bio
+    - :name: Modular & reusable front-end code with HTML5 Sass and CoffeeScript
+      :starting_at: 04.03.2012 12:15
+      :ending_at: 04.03.2012 12:45
+      :speakers:
+        - :name: Roy Tomeij
+          :bio: bio
+    - :name: lunch break
+      :starting_at: 04.03.2012 12:45
+      :ending_at: 04.03.2012 14:10
+    - :name: Rails vs. OOP
+      :starting_at: 04.03.2012 14:15
+      :ending_at: 04.03.2012 15:00
+    - :name: Responsive Web Design
+      :starting_at: 04.03.2012 15:15
+      :ending_at: 04.03.2012 15:45
+      :speakers:
+        - :name: Nicolas Barrera
+          :bio: bio
+    - :name: Get out of the trap
+      :starting_at: 04.03.2012 16:00
+      :ending_at: 04.03.2012 16:30
+      :speakers:
+        - :name: Jan
+          :bio: bio      
+        - :name: Georg
+          :bio: bio   
+        - :name: Ralph
+          :bio: bio   
+    - :name: Distributed Hell
+      :starting_at: 04.03.2012 16:45
+      :ending_at: 04.03.2012 17:15
+      :speakers:
+        - :name: Krzysztof Kowalik
+          :bio: bio
+    - :name: 'ØMQ: A way towards fully distributed architectures'
+      :starting_at: 04.03.2012 17:30
+      :ending_at: 04.03.2012 18:00
+      :speakers:
+        - :name: Martin Sustrik
+          :bio: bio
+    - :name: Lightning talks
+      :starting_at: 04.03.2012 18:15
+      :ending_at: 04.03.2012 19:30
