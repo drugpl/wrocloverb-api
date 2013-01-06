@@ -15,7 +15,8 @@ venues.each do |v|
                            :name => s.fetch(:name), :venue => venue
     venue.slots << slot
 
-    s.fetch(:speakers).each do |sp|
+    speakers = s.fetch(:speakers) { Array.new }
+    speakers.each do |sp|
       speaker = Speaker.find_or_create_by_name sp.fetch(:name)
       speaker.update_attributes :bio => sp.fetch(:bio)
       slot.speakers << speaker
