@@ -1,0 +1,26 @@
+---
+- :address: "ul. Joliot-Curie 15"
+  :latitude: 80.00
+  :longtitude: 30.00
+  :name: "Instytut Informatyki Uniwersytetu Wroclawskiego"
+  :slots:
+    - :name: "Opening talk"
+      :starting_at: 10:00
+      :ending_at: 10:15
+      :speakers:
+        - :name: "DRUG"
+          :bio: "bio"
+    - :name: "It's All About Respect!"
+      :starting_at: 10:30
+      :ending_at: 11:15
+      :speakers:
+        - :name: "Nick Sutterer"
+          :bio: "drinker"
+    - :name: "Rails: past, present and the future"
+      :starting_at: 11:30
+      :ending_at: 12:00
+      :speakers:
+        - :name: "Piotr Sarnacki"
+          :bio: "bio"
+
+
