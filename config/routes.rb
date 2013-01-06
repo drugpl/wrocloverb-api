@@ -3,6 +3,7 @@ WrocLove::Application.routes.draw do
     resources :speakers, except: :edit
     resources :supporters, except: :edit
     resources :organizers, except: :edit
+    resources :venues, except: :edit
   end
 
   # The priority is based upon order of creation:
