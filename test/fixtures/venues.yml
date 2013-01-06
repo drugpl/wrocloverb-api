@@ -1,0 +1,9 @@
+univeristy:
+  name: 'Instytut Informatyki Uniwersytetu Wrocławskiego'
+  address: 'Joliot-Curie 15'
+pub:
+  name: 'Pub Jaskinia'
+  address: 'Kościuszki 34'
+bar:
+  name: 'Cynamon Bar'
+  address: 'Plac Grunwaldzki 23'
