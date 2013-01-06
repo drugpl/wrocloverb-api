@@ -2,6 +2,7 @@ WrocLove::Application.routes.draw do
   namespace :api do
     resources :speakers, except: :edit
     resources :supporters, except: :edit
+    resources :venues, except: :edit
   end
 
   # The priority is based upon order of creation:
