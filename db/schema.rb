@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121115114815) do
+ActiveRecord::Schema.define(:version => 20130113204009) do
 
   create_table "api_tokens", :force => true do |t|
     t.string   "token",      :null => false
@@ -59,13 +59,14 @@ ActiveRecord::Schema.define(:version => 20121115114815) do
     t.string   "website_url"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "photo_url"
   end
 
   create_table "slots_speakers", :force => true do |t|
     t.integer "speaker_id", :null => false
     t.integer "slot_id",    :null => false
-    t.index ["slot_id"], :name => "index_slots_speakers_on_slot_id"
     t.index ["speaker_id"], :name => "index_slots_speakers_on_speaker_id"
+    t.index ["slot_id"], :name => "index_slots_speakers_on_slot_id"
     t.foreign_key ["speaker_id"], "speakers", ["id"], :on_update => :no_action, :on_delete => :no_action
     t.foreign_key ["slot_id"], "slots", ["id"], :on_update => :no_action, :on_delete => :no_action
   end

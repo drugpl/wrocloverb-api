@@ -7,11 +7,7 @@ seeds    = YAML.load_file(filename)
 seeds.fetch(:venues).each do |v|
   venue    = Venue.find_or_create_by_name v.fetch(:name)
   location = Location.new v.fetch(:latitude), v.fetch(:longtitude)
-  # begin
-    venue.update_attributes :address => v.fetch(:address), :location => location
-  # rescue Exception
-    # binding.pry
-  # end
+  venue.update_attributes :address => v.fetch(:address), :location => location
   v.fetch(:slots).each do |s|
     slot = Slot.find_or_create_by_name s.fetch(:name)
     slot.update_attributes :starting_at => s.fetch(:starting_at), :ending_at => s.fetch(:ending_at),
@@ -21,7 +17,8 @@ seeds.fetch(:venues).each do |v|
     speakers = s.fetch(:speakers) { Array.new }
     speakers.each do |sp|
       speaker = Speaker.find_or_create_by_name sp.fetch(:name)
-      speaker.update_attributes :bio => sp.fetch(:bio)
+      speaker.update_attributes :bio => sp.fetch(:bio),
+                                :photo_url => sp.fetch(:photo_url)
       slot.speakers << speaker
 
       speaker.save!

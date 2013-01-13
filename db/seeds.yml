@@ -41,6 +41,7 @@
         :speakers:
           - :name: "DRUG"
             :bio: "bio"
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Open space
         :starting_at: 03.03.2012 10:00
         :ending_at: 03.03.2012 19:00
@@ -50,18 +51,21 @@
         :speakers:
           - :name: Nick Sutterer
             :bio: drinker
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: 'Rails: past present and the future'
         :starting_at: 03.03.2012 11:30
         :ending_at: 03.03.2012 12:00
         :speakers:
           - :name: Piotr Sarnacki
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Decoupling Persistence (Like There’s Some Tomorrow)
         :starting_at: 03.03.2012 12:15
         :ending_at: 03.03.2012 12:45
         :speakers:
           - :name: Piotr Szotkowski
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: lunch break
         :starting_at: 03.03.2012 12:45
         :ending_at: 03.03.2012 14:10
@@ -71,32 +75,38 @@
         :speakers:
           - :name: Tim Lossen
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
           - :name: Dirkjan Bussink
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Fear of adding processes
         :starting_at: 03.03.2012 15:15
         :ending_at: 03.03.2012 15:45
         :speakers:
           - :name: Florian Gilcher
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: User perspective testing, using Ruby
         :starting_at: 03.03.2012 16:00
         :ending_at: 03.03.2012 16:30
         :speakers:
           - :name: Michał Czyż
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: DataMapper 2
         :starting_at: 03.03.2012 16:45
         :ending_at: 03.03.2012 17:15
         :speakers:
           - :name: Piotr Solnica
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: It's Business Time
         :starting_at: 03.03.2012 17:30
         :ending_at: 03.03.2012 18:00
         :speakers:
           - :name: Jim Gay
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Lightning talks
         :starting_at: 03.03.2012 18:15
         :ending_at: 03.03.2012 19:30
@@ -110,6 +120,7 @@
         :speakers:
           - :name: Michał Taszycki
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Testing Fishbowl
         :starting_at: 04.03.2012 10:45
         :ending_at: 04.03.2012 11:15
@@ -119,12 +130,14 @@
         :speakers:
           - :name: Steve Klabnik
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Modular & reusable front-end code with HTML5 Sass and CoffeeScript
         :starting_at: 04.03.2012 12:15
         :ending_at: 04.03.2012 12:45
         :speakers:
           - :name: Roy Tomeij
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: lunch break
         :starting_at: 04.03.2012 12:45
         :ending_at: 04.03.2012 14:10
@@ -137,31 +150,38 @@
         :speakers:
           - :name: Nicolas Barrera
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Get out of the trap
         :starting_at: 04.03.2012 16:00
         :ending_at: 04.03.2012 16:30
         :speakers:
           - :name: Jan
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
           - :name: Georg
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
           - :name: Ralph
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Distributed Hell
         :starting_at: 04.03.2012 16:45
         :ending_at: 04.03.2012 17:15
         :speakers:
           - :name: Krzysztof Kowalik
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: 'ØMQ: A way towards fully distributed architectures'
         :starting_at: 04.03.2012 17:30
         :ending_at: 04.03.2012 18:00
         :speakers:
           - :name: Martin Sustrik
             :bio: bio
+            :photo_url: "http://lorempixel.com/g/635/476/"
       - :name: Lightning talks
         :starting_at: 04.03.2012 18:15
         :ending_at: 04.03.2012 19:30
+
 :supporters:
   - :name: DRUG
     :url: 'http://drug.org.pl'
