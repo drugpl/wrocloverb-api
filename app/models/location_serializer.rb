@@ -2,8 +2,8 @@ class LocationSerializer
   def dump(location)
     return unless location
     ActiveSupport::JSON.encode(
-      latitude: location[:latitude],
-      longitude: location[:longitude]
+      latitude: location.latitude,
+      longitude: location.longitude
     )
   end
 
